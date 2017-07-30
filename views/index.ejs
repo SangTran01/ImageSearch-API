@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Search API</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="page-header">
+			<h1>ImageSearch API Microservice</h1>
+		</div>
+		<div class="page-header">
+			<h3>How to Use:</h3>
+		</div>
+
+		<p>1) To search for something, add <b>'/api/imagesearch/'your_search_here'/</b> to end of the url.</p>
+		<p></p>
+		<p>2) It returns images from a variety of sources</p>
+
+		<div class="page-header">
+			<h3>Optional Parameters:</h3>
+		</div>
+		<li><b>Offset</b> | allows for pagination of results</li>
+
+		<div class="page-header">
+			<h3>Example Usage</h3>
+		</div>
+		<p>To request images:</p>
+		<code>https://tranquil-sands-81392.herokuapp.com/api/imagesearch/pokemon</code>
+		<br/><br/>
+		<p>To request images with a offset:</p>
+		<code>https://tranquil-sands-81392.herokuapp.com/api/imagesearch/funny cats?offset=3</code>
+		<br/><br/>
+		<p>To request all previous searches:</p>
+		<code>https://tranquil-sands-81392.herokuapp.com/api/latest/imagesearch</code>
+
+		<div class="page-header">
+			<h3>Example Output</h3>
+		</div>
+		<p>Image Request:</p>
+		<code>
+			{	
+				<br />
+				url: "http://i0.kym-cdn.com/photos/images/original/000/492/231/636.jpg",
+				<br />
+				snippet: "Fluffy White Cat: Image Gallery",
+				<br />
+				thumbnail:"https://encrypted-tbn0...",
+				<br />
+				context:"http://knowyourmeme.com/memes/fluffy-white-cat..."
+				<br />
+			}		
+		</code>
+		<br /><br />
+		<p>ImageSearch Request:</p>
+		<code>
+			{	
+				<br />
+				term: "funny cats",
+				<br />
+				when: "Sun Jul 30 2017 14:11:46 GMT-0400 (Eastern Daylight Time)",
+				<br />
+				from: "Your approx. location"
+				<br />
+			}		
+		</code>
+
+	</div>
+	<div class="space"></div>
+	<script
+	src="http://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

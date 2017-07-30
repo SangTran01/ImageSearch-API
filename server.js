@@ -33,7 +33,7 @@ app.use(function(err, req, res, next){
 });
 
 app.get('/', function(req,res, next){
-	res.send('index page');
+	res.render('index');
 })
 
 app.get('/api/imagesearch/:search', function(req,res,next){
